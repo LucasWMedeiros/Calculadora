@@ -10,68 +10,69 @@ package calculadora;
  * @author lucas
  */
 public class Calculadora extends javax.swing.JFrame {
-       
-    
+
     double num, resp;
     int calculation;
     double porcentagem;
+
     /**
      * Creates new form Calculadora
      */
     public Calculadora() {
         initComponents();
-               
+
     }
 
-        public void calculo(){
-    switch(calculation){
-        case 1: {
-            resp = num + Double.parseDouble(jtfTela.getText());
-            jtfTela.setText(Double.toString(resp));
-            break;
-        }
-        case 2:{
-            resp = num  - Double.parseDouble(jtfTela.getText());
-            jtfTela.setText(Double.toString(resp));
-            break;
-        }
-        case 3: {
-            resp = num * Double.parseDouble(jtfTela.getText());
-            jtfTela.setText(Double.toString(resp));
-            break;
-        }
-        case 4: {
-            resp = num / Double.parseDouble(jtfTela.getText());
-            jtfTela.setText(Double.toString(resp));
-            break;
-        }
-    }
-}
-        public void calculoporcentagem(){
-            switch(calculation){
-        case 1: {
-            resp = num + (num*porcentagem);
-            jtfTela.setText(Double.toString(resp));
-            break;
-        }
-        case 2:{
-            resp = num - (num*porcentagem) ;
-            jtfTela.setText(Double.toString(resp));
-            break;
-        }
-        case 3: {
-            resp = num * porcentagem ;
-            jtfTela.setText(Double.toString(resp));
-            break;
-        }
-        case 4: {
-            resp = num / (num*porcentagem);
-            jtfTela.setText(Double.toString(resp));
-            break;
+    public void calculo() {
+        switch (calculation) {
+            case 1: {
+                resp = num + Double.parseDouble(jtfTela.getText());
+                jtfTela.setText(Double.toString(resp));
+                break;
+            }
+            case 2: {
+                resp = num - Double.parseDouble(jtfTela.getText());
+                jtfTela.setText(Double.toString(resp));
+                break;
+            }
+            case 3: {
+                resp = num * Double.parseDouble(jtfTela.getText());
+                jtfTela.setText(Double.toString(resp));
+                break;
+            }
+            case 4: {
+                resp = num / Double.parseDouble(jtfTela.getText());
+                jtfTela.setText(Double.toString(resp));
+                break;
+            }
         }
     }
+
+    public void calculoporcentagem() {
+        switch (calculation) {
+            case 1: {
+                resp = num + (num * porcentagem);
+                jtfTela.setText(Double.toString(resp));
+                break;
+            }
+            case 2: {
+                resp = num - (num * porcentagem);
+                jtfTela.setText(Double.toString(resp));
+                break;
+            }
+            case 3: {
+                resp = num * porcentagem;
+                jtfTela.setText(Double.toString(resp));
+                break;
+            }
+            case 4: {
+                resp = num / (num * porcentagem);
+                jtfTela.setText(Double.toString(resp));
+                break;
+            }
         }
-        
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -399,11 +400,11 @@ public class Calculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB2ActionPerformed
-       jtfTela.setText(jtfTela.getText() + "2");
+        jtfTela.setText(jtfTela.getText() + "2");
     }//GEN-LAST:event_JB2ActionPerformed
 
     private void JB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB3ActionPerformed
-       jtfTela.setText(jtfTela.getText() + "3");
+        jtfTela.setText(jtfTela.getText() + "3");
     }//GEN-LAST:event_JB3ActionPerformed
 
     private void JB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB1ActionPerformed
@@ -411,7 +412,7 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_JB1ActionPerformed
 
     private void JB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB4ActionPerformed
-       jtfTela.setText(jtfTela.getText() + "4");
+        jtfTela.setText(jtfTela.getText() + "4");
     }//GEN-LAST:event_JB4ActionPerformed
 
     private void JB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB5ActionPerformed
@@ -419,15 +420,15 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_JB5ActionPerformed
 
     private void JB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB6ActionPerformed
-      jtfTela.setText(jtfTela.getText() + "6");
+        jtfTela.setText(jtfTela.getText() + "6");
     }//GEN-LAST:event_JB6ActionPerformed
 
     private void JB0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB0ActionPerformed
-       jtfTela.setText(jtfTela.getText() + "0");
+        jtfTela.setText(jtfTela.getText() + "0");
     }//GEN-LAST:event_JB0ActionPerformed
 
     private void JB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB7ActionPerformed
-       jtfTela.setText(jtfTela.getText() + "7");
+        jtfTela.setText(jtfTela.getText() + "7");
     }//GEN-LAST:event_JB7ActionPerformed
 
     private void JB8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB8ActionPerformed
@@ -435,35 +436,35 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_JB8ActionPerformed
 
     private void JB9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB9ActionPerformed
-      jtfTela.setText(jtfTela.getText() + "9");
+        jtfTela.setText(jtfTela.getText() + "9");
     }//GEN-LAST:event_JB9ActionPerformed
 
     private void JBpontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBpontoActionPerformed
-      jtfTela.setText(jtfTela.getText() + ".");
+        jtfTela.setText(jtfTela.getText() + ".");
     }//GEN-LAST:event_JBpontoActionPerformed
 
     private void JBdelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBdelActionPerformed
-       int lenght = jtfTela.getText().length();
-       int number = jtfTela.getText().length() -1;
-       String store;
-       
-       if (lenght > 0){
-           StringBuilder back = new StringBuilder(jtfTela.getText());    
-           back.deleteCharAt(number);
-           store = back.toString();
-           jtfTela.setText(store);
-       }
+        int lenght = jtfTela.getText().length();
+        int number = jtfTela.getText().length() - 1;
+        String store;
+
+        if (lenght > 0) {
+            StringBuilder back = new StringBuilder(jtfTela.getText());
+            back.deleteCharAt(number);
+            store = back.toString();
+            jtfTela.setText(store);
+        }
     }//GEN-LAST:event_JBdelActionPerformed
 
     private void JBmultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBmultActionPerformed
-        if (num == 0){
-        calculation = 3;
+        if (num == 0) {
+            calculation = 3;
             num = Double.parseDouble(jtfTela.getText());
             jtlNum.setText(num + " X");
             jtfTela.setText("");
         } else {
             calculo();
-        calculation = 3;
+            calculation = 3;
             num = Double.parseDouble(jtfTela.getText());
             jtlNum.setText(num + " X");
             jtfTela.setText("");
@@ -471,8 +472,8 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_JBmultActionPerformed
 
     private void JBdivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBdivActionPerformed
-        if (num == 0){
-        calculation = 4;
+        if (num == 0) {
+            calculation = 4;
             num = Double.parseDouble(jtfTela.getText());
             jtlNum.setText(num + " ÷");
             jtfTela.setText("");
@@ -486,14 +487,14 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_JBdivActionPerformed
 
     private void JBsubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsubActionPerformed
-        if (num == 0){
-        calculation = 2;
+        if (num == 0) {
+            calculation = 2;
             num = Double.parseDouble(jtfTela.getText());
             jtlNum.setText(num + " -");
             jtfTela.setText("");
         } else {
             calculo();
-        calculation = 2;
+            calculation = 2;
             num = Double.parseDouble(jtfTela.getText());
             jtlNum.setText(num + " -");
             jtfTela.setText("");
@@ -501,14 +502,14 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_JBsubActionPerformed
 
     private void JBsomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsomaActionPerformed
-        if (num == 0){
-        calculation = 1;
+        if (num == 0) {
+            calculation = 1;
             num = Double.parseDouble(jtfTela.getText());
             jtlNum.setText(num + " +");
             jtfTela.setText("");
         } else {
             calculo();
-        calculation = 1;
+            calculation = 1;
             num = Double.parseDouble(jtfTela.getText());
             jtlNum.setText(num + " +");
             jtfTela.setText("");
@@ -516,9 +517,9 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_JBsomaActionPerformed
 
     private void JBclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBclearActionPerformed
-       jtfTela.setText("");
-       num = 0;
-       jtlNum.setText("");
+        jtfTela.setText("");
+        num = 0;
+        jtlNum.setText("");
     }//GEN-LAST:event_JBclearActionPerformed
 
     private void JBigualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBigualActionPerformed
@@ -532,7 +533,7 @@ public class Calculadora extends javax.swing.JFrame {
         jtfTela.setText("");
         if (num == 0) {
             jtfTela.setText(Double.toString(porcentagem));
-        } else  {
+        } else {
             calculoporcentagem();
         }
     }//GEN-LAST:event_JBporcentagemActionPerformed
@@ -596,5 +597,4 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JLabel jtlNum;
     // End of variables declaration//GEN-END:variables
 
-  
 }
