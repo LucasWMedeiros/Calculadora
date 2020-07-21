@@ -14,6 +14,7 @@ public class Calculadora extends javax.swing.JFrame {
     
     double num, resp;
     int calculation;
+    double porcentagem;
     /**
      * Creates new form Calculadora
      */
@@ -30,7 +31,7 @@ public class Calculadora extends javax.swing.JFrame {
             break;
         }
         case 2:{
-            resp = num - Double.parseDouble(jtfTela.getText());
+            resp = num  - Double.parseDouble(jtfTela.getText());
             jtfTela.setText(Double.toString(resp));
             break;
         }
@@ -46,6 +47,30 @@ public class Calculadora extends javax.swing.JFrame {
         }
     }
 }
+        public void calculoporcentagem(){
+            switch(calculation){
+        case 1: {
+            resp = num + (num*porcentagem);
+            jtfTela.setText(Double.toString(resp));
+            break;
+        }
+        case 2:{
+            resp = num - (num*porcentagem) ;
+            jtfTela.setText(Double.toString(resp));
+            break;
+        }
+        case 3: {
+            resp = num * porcentagem ;
+            jtfTela.setText(Double.toString(resp));
+            break;
+        }
+        case 4: {
+            resp = num / (num*porcentagem);
+            jtfTela.setText(Double.toString(resp));
+            break;
+        }
+    }
+        }
         
     /**
      * This method is called from within the constructor to initialize the form.
@@ -76,10 +101,13 @@ public class Calculadora extends javax.swing.JFrame {
         jtfTela = new javax.swing.JTextField();
         JBigual = new javax.swing.JButton();
         jtlNum = new javax.swing.JLabel();
+        JBporcentagem = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        JB2.setBackground(new java.awt.Color(0, 0, 0));
         JB2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JB2.setForeground(new java.awt.Color(255, 255, 255));
         JB2.setText("2");
         JB2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,7 +115,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JB3.setBackground(new java.awt.Color(0, 0, 0));
         JB3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JB3.setForeground(new java.awt.Color(255, 255, 255));
         JB3.setText("3");
         JB3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,7 +125,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JB1.setBackground(new java.awt.Color(0, 0, 0));
         JB1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JB1.setForeground(new java.awt.Color(255, 255, 255));
         JB1.setText("1");
         JB1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +135,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JB4.setBackground(new java.awt.Color(0, 0, 0));
         JB4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JB4.setForeground(new java.awt.Color(255, 255, 255));
         JB4.setText("4");
         JB4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +145,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JB5.setBackground(new java.awt.Color(0, 0, 0));
         JB5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JB5.setForeground(new java.awt.Color(255, 255, 255));
         JB5.setText("5");
         JB5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,7 +155,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JB6.setBackground(new java.awt.Color(0, 0, 0));
         JB6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JB6.setForeground(new java.awt.Color(255, 255, 255));
         JB6.setText("6");
         JB6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +165,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JB0.setBackground(new java.awt.Color(0, 0, 0));
         JB0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JB0.setForeground(new java.awt.Color(255, 255, 255));
         JB0.setText("0");
         JB0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +175,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JB7.setBackground(new java.awt.Color(0, 0, 0));
         JB7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JB7.setForeground(new java.awt.Color(255, 255, 255));
         JB7.setText("7");
         JB7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,7 +185,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JB8.setBackground(new java.awt.Color(0, 0, 0));
         JB8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JB8.setForeground(new java.awt.Color(255, 255, 255));
         JB8.setText("8");
         JB8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,7 +195,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JB9.setBackground(new java.awt.Color(0, 0, 0));
         JB9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JB9.setForeground(new java.awt.Color(255, 255, 255));
         JB9.setText("9");
         JB9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,7 +205,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JBponto.setBackground(new java.awt.Color(0, 0, 0));
         JBponto.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JBponto.setForeground(new java.awt.Color(255, 255, 255));
         JBponto.setText(".");
         JBponto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,7 +215,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JBdel.setBackground(new java.awt.Color(0, 0, 0));
         JBdel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JBdel.setForeground(new java.awt.Color(255, 255, 255));
         JBdel.setText("Del");
         JBdel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,7 +225,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JBmult.setBackground(new java.awt.Color(0, 0, 0));
         JBmult.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JBmult.setForeground(new java.awt.Color(255, 255, 255));
         JBmult.setText("X");
         JBmult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,7 +235,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JBdiv.setBackground(new java.awt.Color(0, 0, 0));
         JBdiv.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JBdiv.setForeground(new java.awt.Color(255, 255, 255));
         JBdiv.setText("÷");
         JBdiv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +245,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JBsub.setBackground(new java.awt.Color(0, 0, 0));
         JBsub.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JBsub.setForeground(new java.awt.Color(255, 255, 255));
         JBsub.setText("-");
         JBsub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,7 +255,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JBsoma.setBackground(new java.awt.Color(0, 0, 0));
         JBsoma.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JBsoma.setForeground(new java.awt.Color(255, 255, 255));
         JBsoma.setText("+");
         JBsoma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,7 +265,9 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        JBclear.setBackground(new java.awt.Color(0, 0, 0));
         JBclear.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JBclear.setForeground(new java.awt.Color(255, 255, 255));
         JBclear.setText("AC");
         JBclear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,7 +278,9 @@ public class Calculadora extends javax.swing.JFrame {
         jtfTela.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jtfTela.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
+        JBigual.setBackground(new java.awt.Color(0, 0, 0));
         JBigual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JBigual.setForeground(new java.awt.Color(255, 255, 255));
         JBigual.setText("=");
         JBigual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +290,17 @@ public class Calculadora extends javax.swing.JFrame {
 
         jtlNum.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtlNum.setForeground(new java.awt.Color(255, 51, 51));
+        jtlNum.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+
+        JBporcentagem.setBackground(new java.awt.Color(0, 0, 0));
+        JBporcentagem.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JBporcentagem.setForeground(new java.awt.Color(255, 255, 255));
+        JBporcentagem.setText("%");
+        JBporcentagem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBporcentagemActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -236,7 +309,6 @@ public class Calculadora extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jtlNum, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jtfTela, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -271,16 +343,21 @@ public class Calculadora extends javax.swing.JFrame {
                                 .addComponent(JB0, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(JBponto, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(JBigual, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(JBsoma, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(JBponto, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(JBporcentagem, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(JBigual, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(JBsoma, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addComponent(jtlNum, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jtlNum, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jtfTela, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -304,18 +381,18 @@ public class Calculadora extends javax.swing.JFrame {
                         .addComponent(JB3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(JBsub, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JB0, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JBponto, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JBdel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JBporcentagem, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JB0, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JBponto, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JBdel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JBclear, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JBigual, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(JBsoma, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(JBclear, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JBigual, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JBsoma, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38))
         );
 
         pack();
@@ -379,41 +456,86 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_JBdelActionPerformed
 
     private void JBmultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBmultActionPerformed
-       num = Double.parseDouble(jtfTela.getText());
+        if (num == 0){
         calculation = 3;
-        jtfTela.setText("");
-        jtlNum.setText(num + "X");
+            num = Double.parseDouble(jtfTela.getText());
+            jtlNum.setText(num + " X");
+            jtfTela.setText("");
+        } else {
+            calculo();
+        calculation = 3;
+            num = Double.parseDouble(jtfTela.getText());
+            jtlNum.setText(num + " X");
+            jtfTela.setText("");
+        }
     }//GEN-LAST:event_JBmultActionPerformed
 
     private void JBdivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBdivActionPerformed
-        num = Double.parseDouble(jtfTela.getText());
+        if (num == 0){
         calculation = 4;
-        jtfTela.setText("");
-        jtlNum.setText(num + "÷");
+            num = Double.parseDouble(jtfTela.getText());
+            jtlNum.setText(num + " ÷");
+            jtfTela.setText("");
+        } else {
+            calculo();
+            calculation = 4;
+            num = Double.parseDouble(jtfTela.getText());
+            jtlNum.setText(num + " ÷");
+            jtfTela.setText("");
+        }
     }//GEN-LAST:event_JBdivActionPerformed
 
     private void JBsubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsubActionPerformed
-      num = Double.parseDouble(jtfTela.getText());
+        if (num == 0){
         calculation = 2;
-        jtfTela.setText("");
-        jtlNum.setText(num + "-");
+            num = Double.parseDouble(jtfTela.getText());
+            jtlNum.setText(num + " -");
+            jtfTela.setText("");
+        } else {
+            calculo();
+        calculation = 2;
+            num = Double.parseDouble(jtfTela.getText());
+            jtlNum.setText(num + " -");
+            jtfTela.setText("");
+        }
     }//GEN-LAST:event_JBsubActionPerformed
 
     private void JBsomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsomaActionPerformed
-        num = Double.parseDouble(jtfTela.getText());
+        if (num == 0){
         calculation = 1;
-        jtfTela.setText("");
-        jtlNum.setText(num + "+");
+            num = Double.parseDouble(jtfTela.getText());
+            jtlNum.setText(num + " +");
+            jtfTela.setText("");
+        } else {
+            calculo();
+        calculation = 1;
+            num = Double.parseDouble(jtfTela.getText());
+            jtlNum.setText(num + " +");
+            jtfTela.setText("");
+        }
     }//GEN-LAST:event_JBsomaActionPerformed
 
     private void JBclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBclearActionPerformed
        jtfTela.setText("");
+       num = 0;
+       jtlNum.setText("");
     }//GEN-LAST:event_JBclearActionPerformed
 
     private void JBigualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBigualActionPerformed
         calculo();
         jtlNum.setText("");
     }//GEN-LAST:event_JBigualActionPerformed
+
+    private void JBporcentagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBporcentagemActionPerformed
+        double numcalc = Double.parseDouble(jtfTela.getText());
+        porcentagem = numcalc / 100;
+        jtfTela.setText("");
+        if (num == 0) {
+            jtfTela.setText(Double.toString(porcentagem));
+        } else  {
+            calculoporcentagem();
+        }
+    }//GEN-LAST:event_JBporcentagemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -467,6 +589,7 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton JBigual;
     private javax.swing.JButton JBmult;
     private javax.swing.JButton JBponto;
+    private javax.swing.JButton JBporcentagem;
     private javax.swing.JButton JBsoma;
     private javax.swing.JButton JBsub;
     private javax.swing.JTextField jtfTela;
